@@ -12,15 +12,14 @@ import GameHeading from "./components/GameDisplay/GameHeading";
 
 export interface GameQuery {
   genre: Genre | null;
-  platform : Platform | null;
+  platform: Platform | null;
   sortOrder: string;
   searchText: string;
 }
 
-
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-  
+
   return (
     <Grid
       templateAreas={{
@@ -47,7 +46,7 @@ function App() {
       </Show>
       <GridItem area="main">
         <GameHeading gameQuery={gameQuery} />
-        <Box >
+        <Box>
           <Flex marginBottom={5}>
             <Box marginRight={5}>
               <PlatformSelector
